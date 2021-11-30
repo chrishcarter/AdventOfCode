@@ -12,11 +12,11 @@ workspace for Advent of Code 2021 challenge
 
 ### How to get array from new line seperated string of data
 ``` javascript
-function getDataForDay_asArray(day, filename){
+function getDataForDay_asArray(day){
     /* 
     day <integer>
-    fielname <string>
     */
+   let filename = "data.txt"
 
     let fileContent = fs.readFileSync(process.cwd() + "\\" + "d" + day.toString() + "\\" + filename).toString()
     let dataArray   = fileContent.split(/\r?\n/)
