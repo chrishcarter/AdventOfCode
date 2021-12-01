@@ -1,5 +1,5 @@
 # AdventOfCode2021
-workspace for Advent of Code 2021 challenge
+workspace for Advent of Code 2021 challenge. Using Node.js [v14.15.3](https://nodejs.org/en/blog/release/v14.15.3/)
 
 [Advent of Code 2021](https://adventofcode.com/2021)
 
