@@ -3,10 +3,12 @@ workspace for Advent of Code 2021 challenge
 
 [Advent of Code 2021](https://adventofcode.com/2021)
 
+[BZ leaderboard 2021](https://adventofcode.com/2021/leaderboard/private/view/1136052)
+
 ## Problem Index
 | Day | Problem | Solution |Solved?|Solution |Solved?|
 | :----:|:----:|----:|:----|---:|    :---|                                       
-| 1 |  [Sonar Sweep](https://adventofcode.com/2021/day/1)| [p1](d01/sonarSweep_p1.js) | &#9745;| [p2](d01/sonarSweep_p2.js)|         &#9745;|
+| 1 |  [Sonar Sweep](https://adventofcode.com/2021/day/1)| [p1](d_1/sonarSweep_p1.js) | &#9745;| [p2](d_1/sonarSweep_p2.js)|         &#9745;|
 
 ## Notes
 
