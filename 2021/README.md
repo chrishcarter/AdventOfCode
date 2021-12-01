@@ -20,7 +20,7 @@ function getDataForDay_asArray(day){
     */
     let fs               = require('fs')
     let filename         = "data.txt"
-    let fileContent     = fs.readFileSync(process.cwd() + "\\" + "d" + day.toString() + "\\" + filename).toString()
+    let fileContent     = fs.readFileSync(process.cwd() + "\\" + "d_" + day.toString() + "\\" + filename).toString()
     let dataArray       = fileContent.split(/\r?\n/)
     return dataArray
 }
