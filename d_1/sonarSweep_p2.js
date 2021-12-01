@@ -13,11 +13,11 @@ let sonarSweep_data = getDataForDay_asArray(1)
 // this assumes array is > 1
 let increaseCounter = 1
 for ( let i = 0 ; i < sonarSweep_data.length ; i++){
-    let point_current     = sonarSweep_data[i]
-    let point_next        = sonarSweep_data[i+1]
-    if ( point_current < point_next){
+    let current     = sonarSweep_data[i]
+    let next        = sonarSweep_data[i+1]
+    if ( current < next){
         increaseCounter +=1
-        console.log("#"+i + "\t" + point_current + " < " + point_next +"\tincreaseCounter["+ increaseCounter +"]")
+        console.log("#"+i + "\t" + current + " < " + next +"\tincreaseCounter["+ increaseCounter +"]")
     }
 }
 
