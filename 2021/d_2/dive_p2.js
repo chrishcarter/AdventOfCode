@@ -9,33 +9,40 @@ function getDataForDay_asArray(day){
     return dataArray
 }
 
+function submarinePosition(_submarine){
+    // submarine is object with aim , travel_x, depth_y as integers
+    return "[ x:" +_submarine.travel_x+", depth:"+_submarine.depth_y+"]"
+}
+
+function multiplyTravelAndDepth(_submarine){
+    // submarine is object with aim , travel_x, depth_y as integers
+    return _submarine.travel_x * _submarine.depth_y
+}
+
 let dive_data = getDataForDay_asArray(2)
 
-let dist_x  = 0
-let depth   = 0
-let aim     = 0
+let submarine = { aim: 0 ,travel_x : 0 , depth_y : 0  }
 
 for (i in dive_data){
     instruction     = dive_data[i].split(' ')
     let command     = instruction[0]
     let distance    = parseInt(instruction[1])
 
-    if (command == "forward"){
-        dist_x  += distance
-        depth   += aim*distance
+    switch(command){
+        case'forward':
+            submarine.travel_x  += distance
+            submarine.depth_y   += submarine.aim*distance
+            break;
+        case'down':
+            submarine.aim       += distance
+            break;
+        case'up':
+            submarine.aim       -= distance 
+            break;
     }
-    if (command == "down"){
-        //depth   += distance
-        aim     += distance
-    }
-    if (command == "up"){
-        //depth   -= distance
-        aim     -=distance
-    }
-
-    console.log("#"+i+ "\t" +"dist_x = " + dist_x +"\t" +"depth = " + depth)
+    console.log("#"+i+ "\t" + submarinePosition(submarine))
 }
 
 
-console.log("dist_x = " + dist_x +"\t" +"depth = " + depth + "\nmultiplied = " + dist_x * depth)
+console.log("answer = " + multiplyTravelAndDepth(submarine))
 
