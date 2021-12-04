@@ -9,10 +9,24 @@ function getDataForDay_asArray(day, is_test){
 }
 
 function get_finalScore(dataSet ){
+    const calls = dataSet[0]
+    if(is_debug) console.log(calls)
 
+    // make up each of the boards they are all 5*5
+
+    const boardSize = 5
+    //starting from line 3
+    //      next 5 lines are the array
+    //      skip a line
+    if(is_debug) console.log("number of boards = " +( dataSet.length -1) / (boardSize+1) + "\t from dataset of length : " + dataSet.length)
+    //const boards = 
+
+
+    
     return 10
 }
 
+let is_debug = true
 
 let test_result         = get_finalScore(getDataForDay_asArray(4, true))
 let test_knownAnswer    = 4512
