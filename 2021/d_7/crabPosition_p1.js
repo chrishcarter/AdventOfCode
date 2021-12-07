@@ -37,24 +37,6 @@ function leastFuelSpentToAlignToPosition(crab_positions_string){
     }
     if(is_debug)console.log(allMovesRecorded)
 
-    /*
-    const middle = Math.floor(crab_positions_int.length / 2);
-    console.log(middle)
-    
-    if (crab_positions_int.length % 2 === 0) {
-        return (crab_positions_int[middle - 1] + crab_positions_int[middle]) / 2;
-    }
-
-    console.log(crab_positions_int)
-    console.log(middle)
-    
-    const crabPos_sum       = crab_positions_int.reduce((a, b) => a + b, 0);
-    const crabPos_avg       = (crabPos_sum / crab_positions_int.length) || 0;
-    const crabPos_median    = 2
-
-    if(is_debug)console.log("sum["+crabPos_sum+"] avg["+crabPos_avg+"]")
-    */
-
     return min_moves
 }
 
@@ -62,7 +44,7 @@ let is_debug            = false
 let test_result         = leastFuelSpentToAlignToPosition(data_test)
 let test_knownAnswer    = 37
 
-console.assert(test_result == test_knownAnswer , "test_result["+test_result+ "] =/= test_knownAnswer [" + test_knownAnswer + "]")
+console.assert(test_result == test_knownAnswer , `test_result [${test_result}] =/= test_knownAnswer [${test_knownAnswer}]`)
 
 let finalScore          = leastFuelSpentToAlignToPosition(data)
 console.log("p1 Answer = " + finalScore)
