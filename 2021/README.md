@@ -20,9 +20,8 @@ workspace for Advent of Code 2021 challenge. Using Node.js [v14.15.3](https://no
 ### How to get array from new line seperated string of data
 ``` javascript
 const fs            = require("fs")
-const day           = 7
-const data_example  = fs.readFileSync(process.cwd(), `\\d_${day}\\${data}_example.txt`).toString().split(",")
-const data      = fs.readFileSync(process.cwd(), `\\d_${day}\\${data}txt`).toString().split(",")
+const data_example  = fs.readFileSync(process.cwd() + "\\d_8\\data_example.txt").toString().split(",")
+const data          = fs.readFileSync(process.cwd() + "\\d_8\\data.txt").toString().split(",")
 
 ```
 
