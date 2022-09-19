@@ -2,6 +2,8 @@ const fs            = require("fs")
 const data_example  = fs.readFileSync(process.cwd() + "\\d_8\\data_example.txt").toString().split("\n")
 const data          = fs.readFileSync(process.cwd() + "\\d_8\\data.txt").toString().split("\n")
 
+
+
 function main(in_data){
 
     let p1_counter = 0
@@ -12,6 +14,7 @@ function main(in_data){
        for( n in output_digits){
            const digit = output_digits[n].trim()
            let is_counted = false
+            
            switch ( digit.length ){
                 case 2: // is 1
                     is_counted = true
